@@ -92,7 +92,7 @@
   "Return the point of the yaml before the point p (default to current point) or nil."
   (labels ((f ()
 	      (unless (= (point) (point-min))
-		(previous-line)
+		(previous-line 1)
 		(beginning-of-line)
 		(if (yaml-path/yaml-line?)
 		    (point)
